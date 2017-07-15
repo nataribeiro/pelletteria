@@ -6,7 +6,7 @@ import {
   View,
   FlatList,
   Image,
-  TouchableHighlight
+  TouchableOpacity
 } from 'react-native';
 
 export default class productList extends Component {
@@ -41,9 +41,12 @@ export default class productList extends Component {
                   </View>
 
                   <Text>{item.promo}</Text>
-                  <TouchableHighlight style={itemButton}>
+                  <TouchableOpacity
+                    // onPress={this.onClickBuy.bind(this)}
+                    onPress={() => {this.props.navigation.navigate('ProductDetails', item)}}
+                    style={itemButton}>
                     <Text style={buttonText}>COMPRAR</Text>
-                  </TouchableHighlight>
+                  </TouchableOpacity>
                 </View>
 
               </View>

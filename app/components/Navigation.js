@@ -3,6 +3,7 @@ import {StackNavigator} from 'react-navigation';
 import ScreenMain from '../containers/ScreenMain';
 import ScreenDetail from '../containers/ScreenDetail';
 import ScreenProductList from '../containers/ScreenProductList';
+import ScreenProductDetail from '../containers/ScreenProductDetail';
 
 const AppNavigator = StackNavigator({
   Home: {
@@ -13,8 +14,10 @@ const AppNavigator = StackNavigator({
   },
   ProductList: {
     screen: ScreenProductList
+  },
+  ProductDetails: {
+    screen: ScreenProductDetail
   }
-
 })
 
 export default AppNavigator;
