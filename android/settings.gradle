@@ -1,0 +1,3 @@
+rootProject.name = 'pelletteria'
+
+include ':app'
