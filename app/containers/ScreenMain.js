@@ -16,6 +16,10 @@ onPressButtom = (event) => {
   this.props.navigation.navigate('Detail');
 }
 
+onPressProductList = () => {
+  this.props.navigation.navigate('ProductList');
+}
+
   render() {
     return (
       <View>
@@ -27,7 +31,13 @@ onPressButtom = (event) => {
         color="red"
         onPress={this.onPressButtom}
         />
+        <Button
+        title="Ir para lista de produtos"
+        color="blue"
+        onPress={this.onPressProductList}
+        />
       </View>
+
     );
   }
 }

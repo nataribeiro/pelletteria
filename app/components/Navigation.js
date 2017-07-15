@@ -2,6 +2,7 @@ import React from 'react';
 import {StackNavigator} from 'react-navigation';
 import ScreenMain from '../containers/ScreenMain';
 import ScreenDetail from '../containers/ScreenDetail';
+import ScreenProductList from '../containers/ScreenProductList';
 
 const AppNavigator = StackNavigator({
   Home: {
@@ -9,6 +10,9 @@ const AppNavigator = StackNavigator({
   },
   Detail:{
     screen: ScreenDetail
+  },
+  ProductList: {
+    screen: ScreenProductList
   }
 
 })
