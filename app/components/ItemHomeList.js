@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {
   StyleSheet,
+  Image,
   Text
 } from 'react-native';
  
@@ -18,12 +19,14 @@ export default class ItemHomeList extends React.Component {
   render () {
     return (
       <Card>
-        <CardTitle>
-          <Text style={styles.title}>Card Title</Text>
-        </CardTitle>
-        <CardContent>
-          <Text>Content</Text>
-        </CardContent>
+        <CardImage>
+          <Image
+                style={{width: 400, height: 200}}
+                resizeMode={Image.resizeMode.cover}
+                source={{uri: 'https://getmdl.io/assets/demos/image_card.jpg'}}
+              />
+        </CardImage>
+
         <CardAction >
           <Button
             style={styles.button}
