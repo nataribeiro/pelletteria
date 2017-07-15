@@ -7,7 +7,10 @@ import {
   View
 } from 'react-native';
 
+import ItemHomeList from '../components/ItemHomeList'
+
 var homeListNews = ["primeira", "Segunda"];
+
 export default class ScreenMain extends React.Component {
 
   constructor() {
@@ -20,8 +23,9 @@ export default class ScreenMain extends React.Component {
   renderRow(rowData, sectionID, rowID) {
       return (
           <TouchableHighlight 
-          onPress={this.onPressButtom}>
+            onPress={this.onPressButtom}>
             <View>
+                <ItemHomeList>{rowData}</ItemHomeList>
                 <Text numberOfLines={1}>{rowData}</Text>
                 <View style={{height: 1, backgroundColor: '#dddddd'}}/>
             </View>
@@ -38,7 +42,7 @@ onPressButtom = (event) => {
 }
 
  _onPressRow(rowData) {
-    this.props.navigation.navigate('Detail');
+    alert(rowData.Text)
   }
 
   render() {
@@ -47,7 +51,7 @@ onPressButtom = (event) => {
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow.bind(this)}
-          />
+        />        
         <Button
         title="Ir para detalhes"
         color="red"
