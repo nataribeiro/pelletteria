@@ -26,8 +26,6 @@ export default class ScreenMain extends React.Component {
             onPress={this.onPressButtom}>
             <View>
                 <ItemHomeList>{rowData}</ItemHomeList>
-                <Text numberOfLines={1}>{rowData}</Text>
-                <View style={{height: 1, backgroundColor: '#dddddd'}}/>
             </View>
           </TouchableHighlight>
       );
