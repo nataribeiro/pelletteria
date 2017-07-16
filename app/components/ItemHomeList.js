@@ -14,19 +14,23 @@ import {
 } from 'react-native-card-view';
  
 import Button from 'react-native-button';
+
+
  
 export default class ItemHomeList extends React.Component {
+
+  
+
   render () {
     return (
       <Card>
-        <CardImage>
+       
           <Image
-                style={{width: 400, height: 200}}
-                resizeMode={Image.resizeMode.cover}
+                style={{width: 250, height: 150}}
+              
                 source={{uri: 'https://getmdl.io/assets/demos/image_card.jpg'}}
-              />
-        </CardImage>
-
+          />
+      
         <CardAction >
           <Button
             style={styles.button}
@@ -51,5 +55,11 @@ const styles = StyleSheet.create({
   },
   button: {
     marginRight: 10
+  },
+  image:{
+    flex: 1,
+    height: 3,
+    width: 4,
+    resizeMode: 'cover'
   }
 });

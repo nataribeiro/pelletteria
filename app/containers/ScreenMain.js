@@ -45,17 +45,11 @@ onPressButtom = (event) => {
 
   render() {
     return (
-      <View>
+      
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={this.renderRow.bind(this)}
-        />        
-        <Button
-        title="Ir para detalhes"
-        color="red"
-        onPress={this.onPressButtom}
-        />
-      </View>
+          renderRow={this.renderRow.bind(this)}/>
+      
     );
   }
 }
