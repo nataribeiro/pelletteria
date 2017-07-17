@@ -33,7 +33,7 @@ export default class BannerNews extends React.Component {
             },
         ];
 
-        // this.iosMarginTop = Platform.OS == 'ios' ? {marginTop: 20} : {};
+        this.iosMarginTop = Platform.OS == 'ios' ? {marginTop: 20} : {};
 
         this.state = {
             clickTitle: 'You can try clicking beauty',
@@ -51,6 +51,7 @@ export default class BannerNews extends React.Component {
                     onMomentumScrollEnd={this.onMomentumScrollEnd.bind(this)}
                     intent={this.clickListener.bind(this)}
                 />
+
                 <Text>{this.state.clickTitle}</Text>
             </View>
         );
@@ -74,6 +75,10 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#F5FCFF',
     },
+    image: {
+        flex: 1,
+        resizeMode: 'center'
+    },
 });
 
-AppRegistry.registerComponent('example', () => example);
+AppRegistry.registerComponent('bannerNews', () => bannerNews);

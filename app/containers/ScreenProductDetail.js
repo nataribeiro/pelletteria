@@ -25,18 +25,8 @@ export default class productDetails extends Component {
 
   constructor(props) {
       super(props);
-      this.banners = [
-          // {
-          //     title: ' ',
-          //     image: require('../../imgs/uvas.png'),
-          // },
-          // {
-          //     title: ' ',
-          //     image: require('../../imgs/uvas.png'),
-          // }
-      ];
+      this.banners = [];
 
-      // this.iosMarginTop = Platform.OS == 'ios' ? {marginTop: 20} : {};
       this.state = {
           clickTitle: '',
           defaultIndex: 0,
