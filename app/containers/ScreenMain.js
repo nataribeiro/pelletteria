@@ -4,6 +4,7 @@ import {
   Button,
   ListView,
   TouchableHighlight,
+  StyleSheet,
   View
 } from 'react-native';
 
@@ -23,7 +24,8 @@ export default class ScreenMain extends React.Component {
   renderRow(rowData, sectionID, rowID) {
       return (
           <TouchableHighlight 
-            onPress={this.onPressButtom}>
+            onPress={() => {this.props.navigation.navigate('Detail', rowData)}}>
+
             <View>
                 <ItemHomeList>{rowData}</ItemHomeList>
             </View>
@@ -35,20 +37,19 @@ static navigationOptions = {
   title: 'Pagina inicial'
 };
 
-onPressButtom = (event) => {
-  this.props.navigation.navigate('Detail');
+onPressProductList = (event) =>{
+  this.props.navigation.navigate('ProductList');
 }
-
- _onPressRow(rowData) {
-    alert(rowData.Text)
-  }
-
   render() {
     return (
-      
+      <View style={{ flex: 1 }}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow.bind(this)}/>
+        <Button
+          title="Ir para lista de produtos"
+          onPress={this.onPressProductList}/>
+      </View>
       
     );
   }
