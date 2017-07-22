@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   Image,
+  TouchableHighlight,
   Button
 } from 'react-native';
 
@@ -89,6 +90,17 @@ export default class ScreenMain extends React.Component {
           </View>
           
         </ScrollView>
+
+        <View>
+          <TouchableHighlight style={styles.addButton}
+              underlayColor='#ff7043' onPress={()=>{this.props.navigation.navigate('ProductList')}}>
+
+              
+              <Image
+              style={styles.iconeFloat}
+              source={require('../img/ic_currency_white.png')}/>
+          </TouchableHighlight>
+        </View>
       </View>
     );
   }
@@ -163,5 +175,30 @@ const styles = StyleSheet.create({
     right: 0,
     top: 8,
   },
+  iconeFloat:{
+    height: 24,
+    width: 24,
+    margin: 13
+  },
+  addButton: {
+    backgroundColor: '#ff5722',
+    borderColor: '#ff5722',
+    borderWidth: 1,
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 20,
+    right:20,
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 1,
+      width: 0
+    }
+  }
 });
 

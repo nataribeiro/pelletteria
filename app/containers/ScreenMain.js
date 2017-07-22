@@ -87,7 +87,7 @@ var list = [
       'desc': 'Mais uma bolsa entregue e uma cliente feliz com nosso trabalho!\nBolsa saco em couro azul royal, detalhes em metal ouro.\nEncomende a sua também!',
       'img': 'https://scontent.fpoa4-1.fna.fbcdn.net/v/t1.0-9/18157965_529320550743919_8740887904695140169_n.jpg?oh=810e507d46bb980644bcb491c73132c9&oe=59FDFD23',
       'publish': '25/07/2017 15h35',
-      'ration': 4.6,
+      'ration': 4,
       'comments':[
         {author:'Mussum', data:'25/07/2017 15h39', title:'Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Interagi no mé, cursus quis, vehicula ac nisi. Diuretics paradis num copo é motivis de denguis. Quem num gosta di mé, boa gentis num é.'},
         {author:'Mussum', data:'25/07/2017 15h53', title:'Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Atirei o pau no gatis, per gatis num morreus. Manduma pindureta quium dia nois paga. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.'},
