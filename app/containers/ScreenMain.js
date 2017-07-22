@@ -75,7 +75,7 @@ var list = [
       'desc': 'Mais uma bolsa entregue e uma cliente feliz com nosso trabalho!\nBolsa saco em couro azul royal, detalhes em metal ouro.\nEncomende a sua também!',
       'img': 'https://scontent.fpoa4-1.fna.fbcdn.net/v/t1.0-9/17862821_520833191592655_6798476686917722834_n.jpg?oh=94693ba7d3437afd01235b625470f368&oe=59C793DD',
       'publish': '25/06/2017 15h35',
-      'ration': 3.2,
+      'ration': 2.7,
       'comments':[
         {author:'anonimo', data:'25/06/2017 15h45', title:'Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Quem num gosta di mim que vai caçá sua turmis! Mé faiz elementum girarzis, nisi eros vermeio.'},
         {author:'anonimo', data:'25/06/2017 16h35', title:'Viva Forevis aptent taciti sociosqu ad litora torquent. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Atirei o pau no gatis, per gatis num morreus.'},
@@ -87,7 +87,7 @@ var list = [
       'desc': 'Mais uma bolsa entregue e uma cliente feliz com nosso trabalho!\nBolsa saco em couro azul royal, detalhes em metal ouro.\nEncomende a sua também!',
       'img': 'https://scontent.fpoa4-1.fna.fbcdn.net/v/t1.0-9/18157965_529320550743919_8740887904695140169_n.jpg?oh=810e507d46bb980644bcb491c73132c9&oe=59FDFD23',
       'publish': '25/07/2017 15h35',
-      'ration': 3,
+      'ration': 4.6,
       'comments':[
         {author:'Mussum', data:'25/07/2017 15h39', title:'Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Interagi no mé, cursus quis, vehicula ac nisi. Diuretics paradis num copo é motivis de denguis. Quem num gosta di mé, boa gentis num é.'},
         {author:'Mussum', data:'25/07/2017 15h53', title:'Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Atirei o pau no gatis, per gatis num morreus. Manduma pindureta quium dia nois paga. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.'},
