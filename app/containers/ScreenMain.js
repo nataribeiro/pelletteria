@@ -26,7 +26,7 @@ export default class ScreenMain extends React.Component {
   }
 
   componentDidMount() {
-  return fetch('http://www.mocky.io/v2/597286d61200008f09bb7627')
+  return fetch('http://www.mocky.io/v2/5973af071000005904441901')
     .then((response) => response.json())
     .then((responseJson) => {
       const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
