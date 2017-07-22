@@ -4,64 +4,90 @@ import {
   ScrollView,
   View,
   StyleSheet,
-  Image
+  Image,
+  Button
 } from 'react-native';
 
 import { Divider } from 'react-native-material-design';
 
 
+
 export default class ScreenMain extends React.Component {
 
-static navigationOptions = {
-  title: 'Detalhes do Post'
-};
+  static navigationOptions = {
+    title: 'Detalhes do Post'
+  };
+
+  Comentarios(comentarios) {
+  return comentarios.map(function(comentario, i){
+    return(
+      <View key={i} style={styles.commentContent}>
+          <Text style={styles.divider}>{comentario.author}</Text>
+          <Text style={styles.divider}>{comentario.title}</Text>
+          <Text style={styles.divider}>{comentario.data}</Text>
+          <Divider/>
+      </View>
+    );
+  });
+}
 
   render() {
     const {state} = this.props.navigation;
+    var item = state.params;
+   
+
+  
     return (
       <View style={{backgroundColor:'#FFF', flex: 1 }}>
         <ScrollView style={styles.margin}>
           <Image
             style={{flex: 1, flexDirection: 'row', height: 150}}
-            source={{uri: 'https://scontent.fpoa4-1.fna.fbcdn.net/v/t1.0-9/18157965_529320550743919_8740887904695140169_n.jpg?oh=810e507d46bb980644bcb491c73132c9&oe=59FDFD23'}}
+            source={{uri: item.img}}
           />
 
-          <Text style={styles.title}>Bolsa de couro das melhores </Text>
-          <Divider/>
-
-          <View style={styles.barIcon}>
-          <Image style={styles.icones}
-            source={require('../img/ic_message_text_outline.png')}
-          />
-          <Image
-            style={styles.icones}
-            source={require('../img/ic_bookmark_outline.png')}
-          />
-          <Image
-            style={styles.iconesRight}
-            source={require('../img/ic_share_variant.png')}
-          />
-         </View>
-          <Text style={styles.description}>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker. </Text>
+         <View style={styles.bar}>
+           
+            <Image style={styles.iconesRation}
+              source={ item.ration >= 1 ?                    
+                       require('../img/ic_star.png') : require('../img/ic_star_outline.png')}/>
+            <Image style={styles.iconesRation}
+              source={ item.ration >= 2 ?                    
+                       require('../img/ic_star.png') : require('../img/ic_star_outline.png')}/>
+            <Image style={styles.iconesRation}
+              source={ item.ration >= 3 ?                    
+                       require('../img/ic_star.png') : require('../img/ic_star_outline.png')}/>
+            <Image style={styles.iconesRation}
+              source={ item.ration >= 4 ?                    
+                       require('../img/ic_star.png') : require('../img/ic_star_outline.png')}/>
+            <Image style={styles.iconesRation}
+              source={ item.ration >= 5 ?                    
+                       require('../img/ic_star.png') : require('../img/ic_star_outline.png')}/>
+            <Text style={styles.textRation}> {item.ration}</Text>
+          
+          
           
           <View style={styles.barIcon}>
-            <Image style={styles.iconesRation}
-              source={require('../img/ic_star.png')}
+            <Image
+              style={styles.icones}
+              source={ item.bookmaker ?                    
+                    require('../img/ic_bookmark.png') : require('../img/ic_bookmark_outline.png')}
+                    />
+            <Image
+              style={styles.icones}
+              source={require('../img/ic_share_variant.png')}
             />
-            <Image style={styles.iconesRation}
-              source={require('../img/ic_star.png')}
-            />
-            <Image style={styles.iconesRation}
-              source={require('../img/ic_star.png')}
-            />
-            <Image style={styles.iconesRation}
-              source={require('../img/ic_star.png')}
-            />
-            <Image style={styles.iconesRation}
-              source={require('../img/ic_star_outline.png')}
-            />
+         </View>
+          
           </View>
-
+          <Text style={styles.title}>{item.title} </Text>
+          <Divider style={styles.divider}/>
+          <Text style={styles.description}>{item.desc}</Text>
+          
+          <View style={styles.commentContent}>
+            <Text style={styles.titleComment}>Comentários</Text>
+            {this.Comentarios(item.comments)}
+          </View>
+          
         </ScrollView>
       </View>
     );
@@ -76,25 +102,55 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
     color: '#000'
   },
+  commentContent:{
+    paddingTop: 8,
+    paddingBottom: 8,
+  },
+  titleComment: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingTop: 8,
+    paddingBottom: 8,
+    color: '#808080',
+    textAlign: 'center',
+    backgroundColor: '#F2F2F2'
+  },
+  number:{
+    fontStyle: 'italic',
+    color: '#808080', 
+    fontSize: 10,
+  },
   divider: {
-    color: '#000',
-    marginRight: 16,
-    marginLeft: 16,
+    marginTop: 6,
+    marginBottom: 6,
   },
   margin:{
     marginLeft: 8,
     marginRight: 8,
   },
-  barIcon:{
+  bar:{
     paddingTop: 8,
     paddingBottom: 8,
     flex: 1, 
     flexDirection: 'row'
   },
+  barIcon:{
+    paddingTop: 8,
+    paddingBottom: 8,
+    flex: 1, 
+    flexDirection: 'row',
+    position: 'absolute',
+    right: 0
+  },
   icones:{
     width: 24, 
     height: 24,
     marginRight: 16,
+  },
+  textRation:{
+    width: 24, 
+    height: 24,
+    paddingTop: 4
   },
   iconesRation:{
     width: 24, 
