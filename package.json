@@ -12,6 +12,7 @@
     "react-native-banner": "^0.1.0",
     "react-native-button": "^2.1.0",
     "react-native-card-view": "0.0.3",
+    "react-native-fetch": "^1.0.0",
     "react-native-material-bottom-navigation": "^0.5.1",
     "react-native-material-design": "^0.3.7",
     "react-native-vector-icons": "^4.2.0",

@@ -13,36 +13,47 @@ import { Divider } from 'react-native-material-design';
 export default class ItemHomeList extends React.Component {
 
   render () {
-    return (
+     return (
       <Card>
         <CardImage styles={cardImage}>
           <Image
             style={{flex: 1, flexDirection: 'row', height: 150}}
-            source={{uri: 'https://getmdl.io/assets/demos/image_card.jpg'}} />
+            source={{uri: this.props.children.img}} />
+            <Text style={styles.publish}>Publicado em: {this.props.children.publish}</Text>
         </CardImage>
         
         <CardTitle style={cardTitle}>
-          <Text style={styles.title}>Bolsa de couro das melhores </Text>
+          <Text style={styles.title}>{this.props.children.title}</Text>
+          
         </CardTitle>
       
- <CardContent styles={cardContent}>
-    <Divider style={{flex: 1, flexDirection: 'row', height: 1}} />
- </CardContent>
+        
         <CardContent styles={cardContent}>
             
-            <View style={styles.barIcon}>
-            <Image style={styles.icones}
-              source={require('../img/ic_message_text_outline.png')}
-            />
-            <Image
-              style={styles.icones}
-              source={require('../img/ic_bookmark_outline.png')}
-            />
-            <Image
-              style={styles.iconesRight}
-              source={require('../img/ic_share_variant.png')}
-            />
+            <View style={styles.content}>
+              
+              <Text>{this.props.children.desc}</Text>
+              <Divider style={styles.divider} />  
+              <View style={styles.barIcon}>
+                <Text style={styles.number}>{this.props.children.comments.length}</Text>
+                <Image style={styles.icones}
+                  source={require('../img/ic_message_text_outline.png')}/>
+              
+                <Image
+                  style={styles.icones}
+                  source={
+                    this.props.children.bookmaker ?                    
+                    require('../img/ic_bookmark.png') : require('../img/ic_bookmark_outline.png')}
+                    />
+                  
+                <Image
+                  style={styles.iconesRight}
+                  source={require('../img/ic_share_variant.png')}/>
+                  
+              </View>
+
             </View>
+            
           </CardContent>
 
       </Card>
@@ -61,6 +72,19 @@ const styles = StyleSheet.create({
     color: '#808080', 
     fontSize: 22,
   },
+  number:{
+    fontStyle: 'italic',
+    color: '#808080', 
+    fontSize: 10,
+  },
+  publish:{
+    fontStyle: 'italic',
+    color: '#808080', 
+    fontSize: 10,
+    position: 'absolute',
+    left: 4,
+    top: 4,
+  },
   button: {
     marginRight: 10
   },
@@ -74,12 +98,21 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'row'
   },
+   content:{
+    flex: 2,
+  },
   icones:{
     width: 24, 
     height: 24,
     marginRight: 16,
   },
-
+  divider:{
+    flex: 1, 
+    flexDirection: 'row', 
+    height: 1, 
+    marginTop: 10,
+    marginBottom: 10
+  },
   iconesRight:{
     width: 24, 
     height: 24,

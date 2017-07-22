@@ -4,6 +4,7 @@ import ScreenMain from '../containers/ScreenMain';
 import ScreenDetail from '../containers/ScreenDetail';
 import ScreenProductList from '../containers/ScreenProductList';
 import ScreenProductDetail from '../containers/ScreenProductDetail';
+import Movies from '../containers/ScreenTest';
 
 const AppNavigator = StackNavigator({
   Home: {
@@ -17,7 +18,11 @@ const AppNavigator = StackNavigator({
   },
   ProductDetails: {
     screen: ScreenProductDetail
+  },
+  Movies: {
+    screen: Movies
   }
+
 })
 
 export default AppNavigator;
