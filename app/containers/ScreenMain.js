@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Text,
+  Image,
   Button,
   ListView,
   TouchableHighlight,
@@ -50,25 +51,55 @@ export default class ScreenMain extends React.Component {
       );
     }
 
-
-
-onPressProductList = (event) =>{
-  this.props.navigation.navigate('ProductList');
-}
   render() {
     return (
       <View style={{ flex: 1 }}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderRow.bind(this)}/>
-        <Button
-          title="Ir para lista de produtos"
-          onPress={this.onPressProductList}/>
+        <View>
+          <TouchableHighlight style={styles.addButton}
+              underlayColor='#ff7043' onPress={()=>{this.props.navigation.navigate('ProductList')}}>              
+              <Image
+              style={styles.iconeFloat}
+              source={require('../img/ic_currency_white.png')}/>
+          </TouchableHighlight>
+        </View>
       </View>
       
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  iconeFloat:{
+    height: 24,
+    width: 24,
+    margin: 13
+  },
+  addButton: {
+    backgroundColor: '#ff5722',
+    borderColor: '#ff5722',
+    borderWidth: 1,
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 20,
+    right:20,
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 1,
+      width: 0
+    }
+  }
+});
+
 
 var list = [
     { 'title': 'Bolsa de couro artesanal',
