@@ -20,7 +20,6 @@ entre os meios de comunicação do dono da loja e todos os seus comunicados nas 
 onde o post seria escrito uma vez e replicado em todos os canais.
 Como exemplo podemos citar, facebook, instagran e o aplicativo.
 
-
 Esta página de comunicação direciona o usuário para dois pontos...
 
 Detalhes do comunicação (post): página onde os usuários podem marcar 
@@ -29,11 +28,13 @@ assim como ler os comentários de outros usuários.
 Esta página também refletiria a os impactos das redes sociais e podendo tornar possivel
 o compartilhamento nas redes sociais.
 
-
 Lista de Produtos:
 Podendo ser acessivel tanto da lista dos post como dos detalhes, leva o usuário para
 todos os produtos disponíveis.
 
-
 Detalhes do Produto:
 Página de efetivação de compra do produto.
+
+## Vídeo
+
+link: https://drive.google.com/open?id=0B-RZP_9IwTfJSDQtT19pNUVjd0U
