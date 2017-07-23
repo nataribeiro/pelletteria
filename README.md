@@ -1,13 +1,39 @@
-# Pelletteria
+# pelletteria
 
-Projeto criado para o trabalho final do módulo de React Native
+Project created to improve the knowledge about react native apps;
 
-## Nosso time
-* Itauá Machado
+## Integrantes
+* Itauá Ferreira Machado
 * Natanael Ribeiro
 
 ## Resumo
-As telas desse projeto fazem parte de um projeto maior que será concluído no futuro 
+
+Este é uma aplicação que visa simular um e-commerce de uma loja 
+de bolsas artesanais de couro.
+
+## o Aplicativo
+
+A página inicial não se trata de uma página de vendas, mas sim uma
+página de comunicação da loja com seus clientes...
+o objetivo é que o gerenciados (backoffice) do aplicativo faça uma integração
+entre os meios de comunicação do dono da loja e todos os seus comunicados nas redes sociais
+onde o post seria escrito uma vez e replicado em todos os canais.
+Como exemplo podemos citar, facebook, instagran e o aplicativo.
 
 
-## Url do vídeo
+Esta página de comunicação direciona o usuário para dois pontos...
+
+Detalhes do comunicação (post): página onde os usuários podem marcar 
+como publicação marcadao (semelhante a favorita) e tecer comentarios sobre a publicação,
+assim como ler os comentários de outros usuários.
+Esta página também refletiria a os impactos das redes sociais e podendo tornar possivel
+o compartilhamento nas redes sociais.
+
+
+Lista de Produtos:
+Podendo ser acessivel tanto da lista dos post como dos detalhes, leva o usuário para
+todos os produtos disponíveis.
+
+
+Detalhes do Produto:
+Página de efetivação de compra do produto.
